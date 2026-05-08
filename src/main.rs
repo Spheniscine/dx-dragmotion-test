@@ -56,14 +56,14 @@ pub fn Hero() -> Element {
                         border_radius: "1.5rem",
                         display: "grid",
                         grid_template_columns: "auto auto",
-                        font_size: "4rem",
+                        font_size: "4.5rem",
                         text_align: "center",
                         padding: "0.5rem",
 
                         div {
                             font_family: "KaTeX_Main",
                             text_align: "center",
-                            "13"
+                            "10"
                         },
                         div {
                             font_family: "KaTeX_Main",
@@ -76,7 +76,7 @@ pub fn Hero() -> Element {
                         },
                         div {
                             font_family: "KaTeX_Main",
-                            "13"
+                            "10"
                         },
                     }
                 }
