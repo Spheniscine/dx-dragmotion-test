@@ -11,9 +11,18 @@ fn main() {
 #[component]
 fn App() -> Element {
     rsx! {
-        document::Script {
-            src: "https://cdn.jsdelivr.net/npm/drag-drop-touch@1.3.1/DragDropTouch.min.js?autoload",
-            type: "module"
+        document::Link {
+            rel: "preconnect",
+            href: "https://fonts.googleapis.com",
+        }
+        document::Link {
+            rel: "preconnect",
+            href: "https://fonts.gstatic.com",
+            crossorigin: "anonymous",
+        }
+        document::Link {
+            href: "https://fonts.googleapis.com/css2?family=Noto+Sans+Symbols+2&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap",
+            rel: "stylesheet",
         }
         document::Link { rel: "icon", href: FAVICON }
         document::Link { rel: "stylesheet", href: MAIN_CSS }
@@ -56,23 +65,24 @@ pub fn Hero() -> Element {
                         border_radius: "1.5rem",
                         display: "grid",
                         grid_template_columns: "auto auto",
-                        font_size: "4.5rem",
+                        font_size: "4.25rem",
                         text_align: "center",
                         padding: "0.5rem",
+                        color: "#f70",
 
                         div {
                             font_family: "KaTeX_Main",
-                            text_align: "center",
                             "10"
                         },
                         div {
-                            font_family: "KaTeX_Main",
-                            text_align: "center",
-                            "♠"
+                            font_family: "'Times New Roman'",
+                            font_size: "112%",
+                            "♦︎"
                         },
                         div {
-                            font_family: "KaTeX_Main",
-                            "♠"
+                            font_family: "'Times New Roman'",
+                            font_size: "112%",
+                            "♦︎"
                         },
                         div {
                             font_family: "KaTeX_Main",
