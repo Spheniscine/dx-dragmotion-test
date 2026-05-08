@@ -1,0 +1,35 @@
+[application]
+# `build` & `serve` dist path
+platform = "web"
+
+[web.wasm_opt]
+level = "z"
+debug = false
+keep_names = false
+memory_packing = true
+extra_features = ["--converge"]
+
+[web]
+pre_compress = true
+resource_strategy = "aggressive"
+
+[web.app]
+base_path = "dx-dragmotion-test"
+
+# HTML title tag content
+title = "dx-dragmotion-test"
+
+# include `assets` in web platform
+[web.resource]
+
+# Additional CSS style files
+style = []
+
+# Additional JavaScript files
+script = []
+
+[web.resource.dev]
+
+# Javascript code file
+# serve: [dev-server] only
+script = []

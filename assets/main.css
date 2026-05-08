@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+}
+
+html {
+    font-size: min(1vw, 0.5625vh);
+}
+
+.select-none {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+body {
+    background-color: #0f1116;
+    font-family: "Noto Sans", sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /* disables scrolling */
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    overflow: hidden;
+}
+
+#hero {
+    position: relative;
+    background-color: #031;
+    margin: 0;
+    aspect-ratio: 9 / 16;
+    width: 100rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#links {
+    width: 80rem;
+    text-align: left;
+
+    font-size: 5rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+#links a {
+    color: white;
+    text-decoration: none;
+    margin-top: 4rem;
+    margin: 2rem 0rem;
+    border: white 0.5rem solid;
+    border-radius: 1rem;
+    padding: 2rem;
+}
+
+#links a:hover {
+    background-color: #1f1f1f;
+    cursor: pointer;
+}
+
+#header {
+    width: 100rem;
+}
+
+@font-face {
+    font-family: KaTeX_Main;
+    font-style: normal;
+    font-weight: 700;
+    src: url(https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/fonts/KaTeX_Main-Regular.woff2) format("woff2"),
+        url(https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/fonts/KaTeX_Main-Regular.woff) format("woff"),
+        url(https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/fonts/KaTeX_Main-Regular.ttf) format("truetype");
+}
