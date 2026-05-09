@@ -50,7 +50,7 @@ pub fn Hero() -> Element {
                 margin: "2rem",
                 display: "flex",
                 flex_direction: "row",
-                for i in 0..8 {
+                for i in 0..7 {
                     if i > 0 {
                         div {
                             width: "1rem",
@@ -59,13 +59,13 @@ pub fn Hero() -> Element {
                     div {
                         style: "place-items: center",
                         background_color: "#fff",
-                        width: "9.5rem",
-                        height: "12rem",
+                        width: "11rem",
+                        height: "13.2rem",
                         border: "0.5rem solid #000",
                         border_radius: "1.5rem",
                         display: "grid",
                         grid_template_columns: "auto auto",
-                        font_size: "4.25rem",
+                        font_size: "4.9rem",
                         text_align: "center",
                         padding: "0.5rem",
                         color: "#f70",
@@ -76,12 +76,12 @@ pub fn Hero() -> Element {
                         },
                         div {
                             font_family: "'Times New Roman'",
-                            font_size: "112%",
+                            font_size: "110%",
                             "♦︎"
                         },
                         div {
                             font_family: "'Times New Roman'",
-                            font_size: "112%",
+                            font_size: "110%",
                             "♦︎"
                         },
                         div {
