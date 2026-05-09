@@ -33,6 +33,9 @@ fn App() -> Element {
 
 #[component]
 pub fn Hero() -> Element {
+    let suits = ["♦︎", "♣", "♥", "♠"];
+    let colors = ["#f60", "#060", "#f00", "#009",];
+
     rsx! {
         div {
             id: "hero",
@@ -68,7 +71,7 @@ pub fn Hero() -> Element {
                         font_size: "4.9rem",
                         text_align: "center",
                         padding: "0.5rem",
-                        color: "#f70",
+                        color: colors[i % 4],
 
                         div {
                             font_family: "KaTeX_Main",
@@ -77,12 +80,12 @@ pub fn Hero() -> Element {
                         div {
                             font_family: "'Times New Roman'",
                             font_size: "110%",
-                            "♦︎"
+                            "{suits[i % 4]}",
                         },
                         div {
                             font_family: "'Times New Roman'",
                             font_size: "110%",
-                            "♦︎"
+                            "{suits[i % 4]}",
                         },
                         div {
                             font_family: "KaTeX_Main",
