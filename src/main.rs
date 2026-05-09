@@ -78,7 +78,7 @@ pub fn Hero() -> Element {
                         border_radius: "1.5rem",
                         display: "grid",
                         grid_template_columns: "auto auto",
-                        font_size: "4.9rem",
+                        font_size: "5rem",
                         text_align: "center",
                         padding: "0.5rem",
                         color: colors[i % 4],
