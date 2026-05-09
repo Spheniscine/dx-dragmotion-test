@@ -74,7 +74,7 @@ pub fn Hero() -> Element {
                         background_color: "#fff",
                         width: "11rem",
                         height: "13.2rem",
-                        border: "0.5rem solid #000",
+                        border: "0.25rem solid #000",
                         border_radius: "1.5rem",
                         display: "grid",
                         grid_template_columns: "auto auto",
