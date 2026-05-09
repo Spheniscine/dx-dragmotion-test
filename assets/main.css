@@ -66,12 +66,3 @@ body {
 #header {
     width: 100rem;
 }
-
-@font-face {
-    font-family: KaTeX_Main;
-    font-style: normal;
-    font-weight: 700;
-    src: url(https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/fonts/KaTeX_Main-Regular.woff2) format("woff2"),
-        url(https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/fonts/KaTeX_Main-Regular.woff) format("woff"),
-        url(https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/fonts/KaTeX_Main-Regular.ttf) format("truetype");
-}

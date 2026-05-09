@@ -29,10 +29,10 @@ fn App() -> Element {
         document::Style {
             r#"
             @font-face {{
-                font-family: times-new-roman;
+                font-family: KaTeX_Main;
                 font-style: normal;
                 font-weight: 700;
-                src: url({asset!("assets/times.ttf")}) format("truetype");
+                src: url({asset!("assets/KaTeX_Suits.ttf")}) format("truetype");
             }}
             "#,
         }
@@ -88,13 +88,11 @@ pub fn Hero() -> Element {
                             "10"
                         },
                         div {
-                            font_family: "times-new-roman",
-                            font_size: "110%",
+                            font_family: "KaTeX_Main",
                             "{suits[i % 4]}",
                         },
                         div {
-                            font_family: "times-new-roman",
-                            font_size: "110%",
+                            font_family: "KaTeX_Main",
                             "{suits[i % 4]}",
                         },
                         div {
