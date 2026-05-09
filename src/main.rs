@@ -26,6 +26,16 @@ fn App() -> Element {
         }
         document::Link { rel: "icon", href: FAVICON }
         document::Link { rel: "stylesheet", href: MAIN_CSS }
+        document::Style {
+            r#"
+            @font-face {{
+                font-family: times-new-roman;
+                font-style: normal;
+                font-weight: 700;
+                src: url({asset!("assets/times.ttf")}) format("truetype");
+            }}
+            "#,
+        }
         Hero {}
 
     }
@@ -78,12 +88,12 @@ pub fn Hero() -> Element {
                             "10"
                         },
                         div {
-                            font_family: "'Times New Roman'",
+                            font_family: "times-new-roman",
                             font_size: "110%",
                             "{suits[i % 4]}",
                         },
                         div {
-                            font_family: "'Times New Roman'",
+                            font_family: "times-new-roman",
                             font_size: "110%",
                             "{suits[i % 4]}",
                         },
