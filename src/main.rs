@@ -79,7 +79,7 @@ pub fn Hero() -> Element {
                         border: "0.25rem solid #000",
                         border_radius: "1.5rem",
                         display: "grid",
-                        grid_template_columns: "auto auto",
+                        grid_template_columns: "50% 50%",
                         font_size: "5rem",
                         text_align: "center",
                         padding: "0.5rem",
@@ -91,10 +91,12 @@ pub fn Hero() -> Element {
                         },
                         div {
                             font_family: "KaTeX_Main",
+                            line_height: "1",
                             "{suits[i % 4]}",
                         },
                         div {
                             font_family: "KaTeX_Main",
+                            line_height: "1",
                             "{suits[i % 4]}",
                         },
                         div {
@@ -124,7 +126,7 @@ pub fn Hero() -> Element {
                         border: "0.25rem solid #000",
                         border_radius: "1.5rem",
                         display: "grid",
-                        grid_template_columns: "auto auto",
+                        grid_template_columns: "50% 50%",
                         font_size: "5rem",
                         text_align: "center",
                         padding: "0.5rem",
@@ -174,7 +176,7 @@ pub fn Hero() -> Element {
                         border: "0.25rem solid #000",
                         border_radius: "1.5rem",
                         display: "grid",
-                        grid_template_columns: "auto auto",
+                        grid_template_columns: "50% 50%",
                         font_size: "5rem",
                         text_align: "center",
                         padding: "0.5rem",
@@ -182,27 +184,20 @@ pub fn Hero() -> Element {
 
                         div {
                             font_family: "KaTeX_Main",
-                            position: "relative",
-                            left: "-0.05em",
                             "10"
                         },
                         div {
                             font_family: "'Noto Color Emoji'",
-                            position: "relative",
-                            left: "-0.17em",
                             line_height: "1",
                             "{suits_winter[i % 4]}",
                         },
                         div {
                             font_family: "'Noto Color Emoji'",
-                            position: "relative",
                             line_height: "1",
                             "{suits_winter[i % 4]}",
                         },
                         div {
                             font_family: "KaTeX_Main",
-                            position: "relative",
-                            left: "-0.21em",
                             "10"
                         },
                     }
