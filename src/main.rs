@@ -21,7 +21,7 @@ fn App() -> Element {
             crossorigin: "anonymous",
         }
         document::Link {
-            href: "https://fonts.googleapis.com/css2?family=Noto+Sans+Symbols+2&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap",
+            href: "https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&family=Noto+Sans+Symbols+2&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap",
             rel: "stylesheet",
         }
         document::Link { rel: "icon", href: FAVICON }
@@ -44,6 +44,8 @@ fn App() -> Element {
 #[component]
 pub fn Hero() -> Element {
     let suits = ["♦︎", "♣", "♥", "♠"];
+    let suits_alt = ["▲", "■", "●", "★"];
+    let suits_winter = ["❄", "🎄", "⛄", "🐧"];
     let colors = ["#f60", "#060", "#f00", "#009",];
 
     rsx! {
@@ -102,6 +104,109 @@ pub fn Hero() -> Element {
                     }
                 }
                 
+            }
+
+            div {
+                margin: "2rem",
+                display: "flex",
+                flex_direction: "row",
+                for i in 0..7 {
+                    if i > 0 {
+                        div {
+                            width: "1rem",
+                        }
+                    }
+                    div {
+                        style: "place-items: center",
+                        background_color: "#fff",
+                        width: "11rem",
+                        height: "13.2rem",
+                        border: "0.25rem solid #000",
+                        border_radius: "1.5rem",
+                        display: "grid",
+                        grid_template_columns: "auto auto",
+                        font_size: "5rem",
+                        text_align: "center",
+                        padding: "0.5rem",
+                        color: colors[i % 4],
+
+                        div {
+                            font_family: "KaTeX_Main",
+                            "10"
+                        },
+                        div {
+                            font_family: "'Noto Sans Symbols 2'",
+                            position: "relative",
+                            top: "0.1em",
+                            line_height: "1",
+                            "{suits_alt[i % 4]}",
+                        },
+                        div {
+                            font_family: "'Noto Sans Symbols 2'",
+                            position: "relative",
+                            top: "0.1em",
+                            line_height: "1",
+                            "{suits_alt[i % 4]}",
+                        },
+                        div {
+                            font_family: "KaTeX_Main",
+                            "10"
+                        },
+                    }
+                }
+            }
+
+            div {
+                margin: "2rem",
+                display: "flex",
+                flex_direction: "row",
+                for i in 0..7 {
+                    if i > 0 {
+                        div {
+                            width: "1rem",
+                        }
+                    }
+                    div {
+                        style: "place-items: center",
+                        background_color: "#fff",
+                        width: "11rem",
+                        height: "13.2rem",
+                        border: "0.25rem solid #000",
+                        border_radius: "1.5rem",
+                        display: "grid",
+                        grid_template_columns: "auto auto",
+                        font_size: "5rem",
+                        text_align: "center",
+                        padding: "0.5rem",
+                        color: colors[i % 4],
+
+                        div {
+                            font_family: "KaTeX_Main",
+                            position: "relative",
+                            left: "-0.05em",
+                            "10"
+                        },
+                        div {
+                            font_family: "'Noto Color Emoji'",
+                            position: "relative",
+                            left: "-0.17em",
+                            line_height: "1",
+                            "{suits_winter[i % 4]}",
+                        },
+                        div {
+                            font_family: "'Noto Color Emoji'",
+                            position: "relative",
+                            line_height: "1",
+                            "{suits_winter[i % 4]}",
+                        },
+                        div {
+                            font_family: "KaTeX_Main",
+                            position: "relative",
+                            left: "-0.21em",
+                            "10"
+                        },
+                    }
+                }
             }
             
         }
