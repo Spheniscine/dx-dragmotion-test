@@ -46,7 +46,7 @@ pub fn Hero() -> Element {
     let suits = ["♦︎", "♣", "♥", "♠"];
     let suits_alt = ["▲", "■", "●", "★"];
     let suits_winter = ["❄", "🎄", "⛄", "🐧"];
-    let colors = ["#f60", "#060", "#f00", "#009",];
+    let colors = ["#f60", "#050", "#f00", "#00c",];
 
     rsx! {
         div {
