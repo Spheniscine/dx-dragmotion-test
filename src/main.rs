@@ -45,7 +45,7 @@ fn App() -> Element {
 pub fn Hero() -> Element {
     let suits = ["♦︎", "♣", "♥", "♠"];
     let suits_alt = ["▲", "■", "●", "★"];
-    let suits_winter = ["❄", "🎄", "⛄", "🐧"];
+    let suits_animals = ["🐝", "🐰", "🦊", "🐧"];
     let colors = ["#f60", "#050", "#f00", "#00c",];
 
     rsx! {
@@ -189,12 +189,12 @@ pub fn Hero() -> Element {
                         div {
                             font_family: "'Noto Color Emoji'",
                             line_height: "1",
-                            "{suits_winter[i % 4]}",
+                            "{suits_animals[i % 4]}",
                         },
                         div {
                             font_family: "'Noto Color Emoji'",
                             line_height: "1",
-                            "{suits_winter[i % 4]}",
+                            "{suits_animals[i % 4]}",
                         },
                         div {
                             font_family: "KaTeX_Main",
