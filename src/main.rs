@@ -1,4 +1,5 @@
 use dioxus::prelude::*;
+use dioxus_motion::{AnimationManager, prelude::{AnimationConfig, AnimationMode, Tween}, use_motion};
 
 const FAVICON: Asset = asset!("/assets/favicon.ico");
 const MAIN_CSS: Asset = asset!("/assets/main.css");
@@ -32,7 +33,7 @@ fn App() -> Element {
                 font-family: KaTeX_Main;
                 font-style: normal;
                 font-weight: 700;
-                src: url({asset!("assets/KaTeX_Suits.ttf")}) format("truetype");
+                src: url({asset!("assets/KaTeX_Suits.woff2")}) format("woff2");
             }}
             "#,
         }
@@ -45,8 +46,13 @@ fn App() -> Element {
 pub fn Hero() -> Element {
     let suits = ["♦︎", "♣", "♥", "♠"];
     let suits_alt = ["▲", "■", "●", "★"];
-    let suits_animals = ["🐝", "🐰", "🦊", "🐧"];
+    let suits_animals = ["🦁", "🐰", "🦊", "🐧"];
     let colors = ["#f60", "#050", "#f00", "#00c",];
+
+    let mut anim_x = use_motion(3f32);
+    use_effect(move || {
+        anim_x.animate_to(70., AnimationConfig::new(AnimationMode::Tween(Tween::default())));
+    });
 
     rsx! {
         div {
@@ -62,10 +68,11 @@ pub fn Hero() -> Element {
             // }
 
             div {
+                transform: "scale(0.875)",
                 margin: "2rem",
                 display: "flex",
                 flex_direction: "row",
-                for i in 0..7 {
+                for i in 0..8 {
                     if i > 0 {
                         div {
                             width: "1rem",
@@ -202,6 +209,60 @@ pub fn Hero() -> Element {
                         },
                     }
                 }
+            }
+
+            div {
+                margin: "2rem",
+                display: "flex",
+                flex_direction: "row",
+                div {
+                    style: "place-items: center",
+                    width: "11rem",
+                    height: "13.2rem",
+                    border: "0.25rem solid #000",
+                    border_radius: "1.5rem",
+                    font_size: "5rem",
+                    text_align: "center",
+                    padding: "0.5rem",
+                    class: "card-pattern-1",
+                }
+            }
+
+            div {
+                style: "place-items: center",
+                background_color: "#fff",
+                position: "absolute",
+                top: "75rem",
+                left: "{anim_x.get_value()}rem",
+                width: "11rem",
+                height: "13.2rem",
+                border: "0.25rem solid #000",
+                border_radius: "1.5rem",
+                display: "grid",
+                grid_template_columns: "50% 50%",
+                font_size: "5rem",
+                text_align: "center",
+                padding: "0.5rem",
+                color: colors[3],
+
+                div {
+                    font_family: "KaTeX_Main",
+                    "A"
+                },
+                div {
+                    font_family: "KaTeX_Main",
+                    line_height: "1",
+                    "{suits[3]}",
+                },
+                div {
+                    font_family: "KaTeX_Main",
+                    line_height: "1",
+                    "{suits[3]}",
+                },
+                div {
+                    font_family: "KaTeX_Main",
+                    "A"
+                },
             }
             
         }
