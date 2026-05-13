@@ -45,14 +45,14 @@ fn App() -> Element {
 #[component]
 pub fn Hero() -> Element {
     let suits = ["♦︎", "♣", "♥", "♠"];
-    let suits_alt = ["▲", "■", "●", "★"];
+    let suits_alt = ["■", "▲", "●", "★"];
     let suits_animals = ["🦁", "🐰", "🦊", "🐧"];
-    let colors = ["#f60", "#050", "#f00", "#00c",];
+    let colors = ["#d60", "#050", "#f00", "#00c",];
 
-    let mut anim_x = use_motion(3f32);
-    use_effect(move || {
-        anim_x.animate_to(70., AnimationConfig::new(AnimationMode::Tween(Tween::default())));
-    });
+    // let mut anim_x = use_motion(3f32);
+    // use_effect(move || {
+    //     anim_x.animate_to(70., AnimationConfig::new(AnimationMode::Tween(Tween::default())));
+    // });
 
     rsx! {
         div {
@@ -229,11 +229,12 @@ pub fn Hero() -> Element {
             }
 
             div {
-                style: "place-items: center",
+                style: "place-items: center; --tx: -30rem; --ty: 10rem;",
+                animation: "0.2s movement",
                 background_color: "#fff",
                 position: "absolute",
                 top: "75rem",
-                left: "{anim_x.get_value()}rem",
+                left: "44rem",
                 width: "11rem",
                 height: "13.2rem",
                 border: "0.25rem solid #000",
