@@ -45,7 +45,7 @@ fn App() -> Element {
 #[component]
 pub fn Hero() -> Element {
     let suits = ["♦︎", "♣", "♥", "♠"];
-    let suits_alt = ["■", "▲", "●", "★"];
+    let suits_alt = ["⬥", "▲", "●", "★"];
     let suits_animals = ["🦁", "🐰", "🦊", "🐧"];
     let colors = ["#d60", "#050", "#f00", "#00c",];
 
@@ -82,7 +82,7 @@ pub fn Hero() -> Element {
                         style: "place-items: center",
                         background_color: "#fff",
                         width: "11rem",
-                        height: "13.2rem",
+                        height: "13rem",
                         border: "0.25rem solid #000",
                         border_radius: "1.5rem",
                         display: "grid",
